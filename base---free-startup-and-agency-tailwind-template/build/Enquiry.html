@@ -6,9 +6,9 @@
   <title>Inquiry Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
+<body class="flex items-center justify-center h-screen" style="background-color: #301934;">
 
-  <div class="w-full max-w-md bg-white shadow-md rounded-lg p-6">
+  <div class="w-full max-w-md bg-light-blue-100 shadow-md rounded-lg p-6" style="background-color: #A2D5F2;">
     <h2 class="text-xl font-semibold text-gray-700 text-center mb-4">Enquire Now</h2>
     <form id="enquiryForm" class="space-y-4">
       
@@ -99,52 +99,26 @@
     </form>
   </div>
 
-  <script type="module">
-  // Import Firebase SDK
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
+  <script>
+    const form = document.getElementById("enquiryForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-  // Your Firebase configuration
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
-  };
+      const formData = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        city: document.getElementById("city").value,
+        course: document.getElementById("course").value,
+        center: document.getElementById("center").value,
+      };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  // Form submission logic
-  const form = document.getElementById("enquiryForm");
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const formData = {
-      firstName: document.getElementById("firstName").value,
-      lastName: document.getElementById("lastName").value,
-      email: document.getElementById("email").value,
-      phone: document.getElementById("phone").value,
-      city: document.getElementById("city").value,
-      course: document.getElementById("course").value,
-      center: document.getElementById("center").value,
-    };
-
-    try {
-      // Add data to Firestore
-      await addDoc(collection(db, "enquiries"), formData);
+      console.log("Form data:", formData);
       alert("Form submitted successfully!");
       form.reset();
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      alert("Submission failed! Please try again.");
-    }
-  });
-</script>
-
+    });
   </script>
+
 </body>
 </html>

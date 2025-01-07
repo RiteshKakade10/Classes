@@ -47,39 +47,14 @@
       class="vd wo/4 sd qo f ho oo wf yf"
       :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }"
     >
-      <nav>
-        <ul class="tc _o sf yo cg ep">
-          <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
-          <li><a href="index.html#features" class="xl">Features</a></li>
-          <li class="c i" x-data="{ dropdown: false }">
-            <a
-              href="#"
-              class="xl tc wf yf bg"
-              @click.prevent="dropdown = !dropdown"
-              :class="{ 'mk': page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
-            >
-              Pages
-
-              <svg
-              :class="{ 'wh': dropdown }"
-              class="th mm we fd pf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-              </svg>
-            </a>
-
-            <!-- Dropdown Start -->
-            <ul class="a" :class="{ 'tc': dropdown }">
-              <li><a href="blog-grid.html" class="xl" :class="{ 'mk': page === 'blog-grid' }">Blog Grid</a></li>
-              <li><a href="blog-single.html" class="xl" :class="{ 'mk': page === 'blog-single' }">Blog Single</a></li>
-              <li><a href="signin.html" class="xl" :class="{ 'mk': page === 'signin' }">Sign In</a></li>
-              <li><a href="signup.html" class="xl" :class="{ 'mk': page === 'signup' }">Sign Up</a></li>
-              <li><a href="404.html" class="xl" :class="{ 'mk': page === '404' }">404</a></li>
-            </ul>
-            <!-- Dropdown End -->
-          </li>
-          <li><a href="index.html#support" class="xl">Support</a></li>
-        </ul>
-      </nav>
+    <nav>
+      <ul class="tc _o sf yo cg ep">
+        <li><a href="index.html" class="xl" :class="{ 'mk': page === 'home' }">Home</a></li>
+        <li><a href="index.html#features" class="xl">Features</a></li>
+        <li><a href="index.html#support" class="xl">Support</a></li>
+      </ul>
+    </nav>
+    
 
       <div class="tc wf ig pb no">
         <div class="pc h io pa ra" :class="navigationOpen ? '!-ud-visible' : 'd'">
@@ -121,12 +96,12 @@
             <div class="animate_left jn/2">
               <h1 class="fk vj zp or kk wm wb">We specialize in UI/UX, Web Development, Digital Marketing.</h1>
               <p class="fq">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque fringilla magna mauris. Nulla fermentum viverra sem eu rhoncus consequat varius nisi quis, posuere magna.
+                We specialize in creating exceptional user experiences through UI/UX design, crafting responsive and dynamic websites with expert web development, and driving business growth with tailored digital marketing strategies. Our solutions enhance engagement, boost visibility, and help brands achieve lasting success in the digital world.
               </p>
 
               <div class="tc tf yo zf mb">
                 <a href="Enquiry.html" class="ek jk lk gh gi hi rg ml il vc _d _l"
-                  >Enquiry</a
+                  >For Enquiry</a
                 >
 
                 <span class="tc sf">
@@ -151,7 +126,7 @@
               </div>
               <div>
                 <h4 class="ek yj go kk wm xb">24/7 Support</h4>
-                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                <p>Access our services anytime.</p>
               </div>
             </div>
 
@@ -162,7 +137,7 @@
               </div>
               <div>
                 <h4 class="ek yj go kk wm xb">Take Ownership</h4>
-                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                <p>Empower yourself to lead initiatives and drive results with accountability and confidence.</p>
               </div>
             </div>
 
@@ -173,7 +148,7 @@
               </div>
               <div>
                 <h4 class="ek yj go kk wm xb">Team Work</h4>
-                <p>Lorem ipsum dolor sit amet conse adipiscing elit.</p>
+                <p>Collaborating effectively to achieve common goals through shared ideas, skills, and efforts.</p>
               </div>
             </div>
           </div>
@@ -202,16 +177,10 @@
             <!-- About Content -->
             <div class="animate_right jn/2">
               <h4 class="ek yj mk gb">Why Choose Us</h4>
-              <h2 class="fk vj zp pr kk wm qb">We Make Our customers happy by giving Best services.</h2>
-              <p class="uo">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.</p>
+              <h2 class="fk vj zp pr kk wm qb">Join Us to Learn, Grow, and Succeed!</h2>
+              <p class="uo">For expert instructors, personalized learning, and flexible schedules. We offer comprehensive courses in Web Development, Data Science, and Cybersecurity, ensuring job-ready skills. Our interactive platform, supportive environment, and affordable pricing make learning engaging and accessible, empowering you to succeed in the digital world.</p>
 
-              <a href="https://www.youtube.com/watch?v=xcJtL7QggTI" data-fslightbox class="vc wf hg mb">
-                <span class="tc wf xf be dd rg i gh ua">
-                  <span class="nf h vc yc vd rg gh qk -ud-z-1"></span>
-                  <img src="images/icon-play.svg" alt="Play" />
-                </span>
-                <span class="kk">SEE HOW WE WORK</span>
-              </a>
+             
             </div>
           </div>
         </div>
@@ -374,7 +343,7 @@
       <section class="lj tp kr">
         <!-- Section Title Start -->
         <div
-          x-data="{ sectionTitle: `We Offer The Best Quality Service for You`, sectionTitleText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`}"
+          x-data="{ sectionTitle: `Empowering Your Future with the Best Quality Education  Your Success Starts Here!`, sectionTitleText: ` We focus on delivering high-quality learning experiences that empower you to achieve your goals, ensuring you gain the knowledge, confidence, and expertise to thrive in the ever-evolving digital world.`}"
         >
           <div class="animate_top bb ze rj ki xn vq">
     <h2
@@ -394,43 +363,43 @@
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-04.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Crafted for Startups</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+              <h4 class="ek zj kk wm nb _b">Expert-Led Courses</h4>
+              <p>Learn from industry professionals with years of experience, ensuring top-quality education and practical knowledge.</p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-05.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">High-quality Design</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+              <h4 class="ek zj kk wm nb _b">Flexible Learning Options</h4>
+              <p>Study at your own pace with flexible schedules, evening, and weekend classes to fit your lifestyle.</p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-06.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">All Essential Sections</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+              <h4 class="ek zj kk wm nb _b">Comprehensive Curriculum</h4>
+              <p>Gain in-depth knowledge with our well-structured courses designed to cover all essential skills and techniques.</p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-07.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Speed Optimized</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+              <h4 class="ek zj kk wm nb _b">Hands-On Practice</h4>
+              <p>Engage in real-world projects and interactive sessions to apply your learning practically and build your portfolio.</p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-05.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Fully Customizable</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+              <h4 class="ek zj kk wm nb _b">Job-Ready Skills</h4>
+              <p>Our courses are designed to make you job-ready, with skills that are in high demand in the industry.</p>
             </div>
 
             <!-- Service Item -->
             <div class="animate_top sg oi pi zq ml il am cn _m">
               <img src="images/icon-06.svg" alt="Icon" />
-              <h4 class="ek zj kk wm nb _b">Regular Updates</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor.</p>
+              <h4 class="ek zj kk wm nb _b">Certifications & Career Support</h4>
+              <p>Earn industry-recognized certifications and receive career guidance, from resume building to job placement assistance.</p>
             </div>
           </div>
         </div>
